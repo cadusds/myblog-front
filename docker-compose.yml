@@ -1,0 +1,10 @@
+version: '3'
+services:
+  vue-ui:
+      build: .
+      command: vue ui --headless --port 8000 --host 0.0.0.0
+      ports:
+        - "8000:8000"
+      container_name: vue-ui
+      volumes:
+        - .blog:/usr/src/app/blog/
